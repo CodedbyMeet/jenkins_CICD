@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "YOUR_DOCKERHUB_USERNAME/student-app"
+        IMAGE_NAME = "dockmeet/student-app"
         TAG = "${BUILD_NUMBER}"
     }
 
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR_GITHUB_USERNAME/jenkins_CICD.git'
+                    url: 'https://github.com/codedbyMeet/jenkins_CICD.git'
             }
         }
 
